@@ -16,4 +16,4 @@ function isTokenExpired() {
 //https://finalproyectopeliculasseries.herokuapp.com/api
 //local
 //http://localhost:1337/api/auth/local
-const url = "https://finalproyectopeliculasseries.herokuapp.com/api";
+const url = "http://localhost:1337/api/auth/local";

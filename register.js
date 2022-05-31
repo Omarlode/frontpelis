@@ -1,24 +1,16 @@
-const form = document.getElementById("form");
-const input = document.getElementById("input");
-const result = document.getElementById("result");
+const input = document.getElementById("email");
+const result = document.getElementById("username");
 input.oninput = function () {
   result.value = input.value;
 };
-
+const form = document.getElementById("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   sendData(form);
 });
-const email = document.getElementById("email");
-const username = document.getElementById("username");
 
 async function sendData(form) {
   try {
-    console.log(email.value);
-
-    username.value = email.value;
-    console.log(username.value);
-
     const formData = new FormData(form);
     const queryString = new URLSearchParams(formData).toString();
     const response = await fetch(`${url}/auth/local/register`, {
@@ -40,7 +32,7 @@ async function sendData(form) {
 }
 function checkToken() {
   if (!isTokenExpired()) {
-    window.location.href = "login.html";
+    window.location.href = "home.html";
   }
 }
 checkToken();
@@ -50,5 +42,5 @@ function getData(data) {
 
   localStorage.setItem("jwt", data.jwt);
 
-  window.location.href = "index.html";
+  window.location.href = "home.html";
 }
