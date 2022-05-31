@@ -1,0 +1,139 @@
+/*body {
+  background-color: rgb(22, 77, 120);
+  background-size: cover;
+  min-height: 100%;
+}*/
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+  text-align: center;
+}
+body {
+  background-image: linear-gradient(
+    to right top,
+    #123869,
+    #005f8f,
+    #0088ac,
+    #00b1bf,
+    #55dac9
+  );
+}
+
+.log {
+  background-color: #115591;
+  width: 350px;
+  height: 30px;
+  padding-top: 10px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin-top: 0ch;
+
+  font-size: 20px;
+}
+
+.log {
+  font-family: "Lato", sans-serif;
+  color: aliceblue;
+}
+
+.container {
+  background-color: rgb(241, 247, 252);
+  height: auto;
+  width: 350px;
+  margin-left: 40%;
+  margin-right: 60%;
+  margin-top: 10%;
+  border-radius: 12px;
+  border: #0087ac53 6px solid;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.42);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.42);
+}
+
+.memberdata {
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+
+.abc {
+  width: 80%;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  background-color: #005f8f1b;
+  text-align: center;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.cba {
+  width: 80%;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  background-color: #005f8f1b;
+  text-align: center;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.botoncitu {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: "Open sans", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  align-items: center;
+}
+
+/*.access {
+  margin-right: 15px;
+  color: rgb(255, 255, 255);
+  background-color: #115591;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: none;
+  cursor: pointer;
+}*/
+
+button,
+input[type="submit"],
+input[type="button"] {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: rgb(255, 255, 255);
+  background-color: #74a7d3;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 10px;
+  transition: 0, 3s;
+}
+.access {
+  padding: 15px;
+}
+.register {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: #74a7d3;
+  border-radius: 4px;
+  padding: 10px;
+  transition: 0, 3s;
+}
+
+.access:hover,
+.register:hover {
+  background-color: rgb(233, 161, 27);
+}
