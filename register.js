@@ -13,7 +13,7 @@ async function sendData(form) {
   try {
     const formData = new FormData(form);
     const queryString = new URLSearchParams(formData).toString();
-    const response = await fetch(`${url}/auth/local/register`, {
+    const response = await fetch(`${url}local/register`, {
       method: "POST",
       body: queryString,
       headers: {
@@ -26,6 +26,7 @@ async function sendData(form) {
     }
     const data = await response.json();
     console.log(data);
+    getData(data);
   } catch (error) {
     console.log(error);
   }
@@ -38,7 +39,7 @@ function checkToken() {
 checkToken();
 
 function getData(data) {
-  //console.log(data.jwt);
+  console.log(data.jwt);
 
   localStorage.setItem("jwt", data.jwt);
 

@@ -227,7 +227,6 @@ h3 {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  position: relative;
 }
 
 #toggle {
@@ -256,6 +255,7 @@ h3 {
 }
 
 #galleryView {
+  padding-top: 95px;
   height: 900px;
   width: 100%;
   background: rgb(0, 0, 0);
@@ -304,7 +304,7 @@ h3 {
 }
 
 #mainView {
-  height: 750px;
+  height: 700px;
   width: 500px;
   border-radius: 5px;
   background-color: #000000;
@@ -316,7 +316,7 @@ h3 {
 }
 
 #mainView:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: all 1s;
 }
 
@@ -597,7 +597,7 @@ h3 {
   text-align: center;
   padding: 12px 10px;
   display: inline-flex;
-  position: absolute;
+  position: fixed;
 }
 
 nav ol {

@@ -25,7 +25,7 @@ async function sendData(form) {
     const formData = new FormData(form);
     const queryString = new URLSearchParams(formData).toString();
     const response = await fetch(
-      "http://localhost:1337/api/auth/local", //url + "/auth/local"
+      "http://localhost:1337/api/auth/local", //url + "local"
       {
         method: "POST",
         body: queryString,
