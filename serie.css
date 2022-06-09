@@ -10,11 +10,6 @@ body {
 
 /*HEADER*/
 
-header {
-  z-index: 1;
-  display: block;
-}
-
 .navMenu {
   width: 100%;
   margin: auto;
@@ -39,6 +34,11 @@ nav ol {
   list-style: none;
 }
 
+nav ol li {
+  display: inline-flex;
+  vertical-align: top;
+}
+
 nav,
 ol,
 li,
@@ -46,14 +46,14 @@ a {
   font-family: "Lato", sans-serif;
   color: #f6f4e6;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 1px;
   text-transform: uppercase;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline;
   padding: 7px;
-  margin-top: -5px;
+  margin-top: -3px;
 }
 
 .navMenu a:hover {
@@ -93,7 +93,7 @@ a {
   outline: none;
   background-color: #ffffff;
   height: 30px;
-  width: 450px;
+  width: 550px;
   font-size: 16px;
   border-radius: 2px;
   padding-left: 5px;
@@ -107,72 +107,26 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-/*GENEROS BARRA*/
-
-#tags {
-  width: 80%;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-
-  padding-top: 10%;
-}
-
-.tag {
-  list-style: none;
-  font-family: "Lato";
-  text-transform: uppercase;
+/*.lupa {
+  color: rgb(12, 8, 8);
+  background-color: white;
+  border-radius: 2px;
   font-size: 15px;
-  cursor: pointer;
-  padding: 5px 10px;
-  margin: 7px;
-
-  transition: 0.3s;
-}
-
-.menu-vertical {
+  height: 35px;
+  width: auto;
+  padding: 6px;
+  padding-left: 8px;
   position: absolute;
-  display: none;
-  list-style: none;
-  width: 200px;
-  background-color: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.3s;
+  margin-left: -10px;
 }
 
-.letters {
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-  margin-left: -99px;
-}
-
-.letters > li > a {
-  display: block;
-  padding: 15px 20px;
-  color: #f6f4e6;
-  text-decoration: none;
-}
-
-.letters > li:hover {
-  background-color: #c99525;
-}
-
-.letters li:hover .menu-vertical {
-  display: block;
-}
-
-.letters .tag:hover {
-  position: relative;
-  background-color: #c99525;
-  color: #f7dda5;
-  padding: 8%;
-}
-
-/*------PELICULAS E INFO--------*/
-
-.fullContainer {
-  padding-top: 3%;
-  z-index: 99;
-}
+.lupa:hover {
+  color: #e6441f;
+}/*
+/*Contenedor de peliculas - imagenes e info*/
 
 main {
   display: flex;
@@ -180,7 +134,7 @@ main {
   justify-content: center;
 }
 
-.movie {
+.serie {
   margin-top: 20%;
   width: 250px;
   margin: 1rem;
@@ -191,11 +145,11 @@ main {
   overflow: hidden;
 }
 
-.movie img {
+.serie img {
   width: 100%;
 }
 
-.movie-info {
+.serie-info {
   color: white;
   display: flex;
   align-items: center;
@@ -204,7 +158,7 @@ main {
   letter-spacing: 0.5px;
 }
 
-.movie-info h3 {
+.serie-info h3 {
   margin-top: 0;
   font-family: "Lato", sans-serif;
   text-align: center;
@@ -217,7 +171,7 @@ span {
   margin-right: 20px;
   padding: 5px 5px;
 }
-.movie-info,
+.serie-info,
 span {
   background-color: rgb(215, 66, 81);
   padding: 17px 5px;
@@ -225,17 +179,17 @@ span {
   margin-top: -6px;
 }
 
-.movie-info,
+.serie-info,
 span.green {
   color: lightgreen;
 }
 
-.movie-info,
+.serie-info,
 span.orange {
   color: orange;
 }
 
-.movie-info,
+.serie-info,
 span.red {
   color: rgb(206, 5, 5);
 }
@@ -255,6 +209,38 @@ span.red {
   font-size: 14px;
 }
 
-.movie:hover .overview {
+.serie:hover .overview {
   transform: translateY(0);
+}
+
+/*GENEROS*/
+
+.tagserie {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 8%;
+}
+
+.tagserie {
+  display: inline-block;
+  background-color: #fdbf3a;
+  color: #8c630a;
+  font-family: "Lato";
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 12px 12px;
+  margin: 7px;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.tagserie:hover {
+  background-color: rgb(220, 86, 86);
+  color: white;
 }

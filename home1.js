@@ -1,9 +1,9 @@
 const API_KEY = 'api_key=cfadd5cc0bcaa017195108a4ee064248';
 const BASE_URL = 'https://api.themoviedb.org/3';
 const LANG = '&language=es-ES';
-const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&'+API_KEY+LANG;
+const API_URL = BASE_URL + '/trending/all/week?'+API_KEY+LANG;
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
-const searchURL = BASE_URL + '/search/movie?'+API_KEY+LANG;
+const searchURL = BASE_URL + '/search/trending?'+API_KEY+LANG;
 
 /*Géneros*/
 const genres = [
@@ -220,7 +220,7 @@ function showMovies(data) {
                 
                 ${overview}
                 <br/> 
-                <button class=" trailer" id="${id}">Trailer</button
+                <button class="know-more" id="${id}">Know More</button
             </div>
         
         `
@@ -234,54 +234,8 @@ function showMovies(data) {
     })
 }
 
-
-/* TRAILER OPEN */
-const overlayContent = document.getElementById('overlay-content');
+/**const overlayContent = document.getElementById('overlay-content');
 /* Open when someone clicks on the span element */
-function openNav(movie) {
-  let id = movie.id;
-  fetch(BASE_URL + '/movie/'+id+'/videos?'+API_KEY).then(res => res.json()).then(videoData => {
-    console.log(videoData);
-    if(videoData){
-      document.getElementById("myNav").style.width = "100%";
-      if(videoData.results.length > 0){
-        var embed = [];
-        var dots = [];
-        videoData.results.forEach((video, idx) => {
-          let {name, key, site} = video
-
-          if(site == 'YouTube'){
-              
-            embed.push(`
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${name}" class="embed hide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          
-          `)
-
-            dots.push(`
-              <span class="dot">${idx + 1}</span>
-            `)
-          }
-        })
-        
-        var content = `
-        <h1 class="no-results">${movie.original_title}</h1>
-        <br/>
-        
-        ${embed.join('')}
-        <br/>
-        <div class="dots">${dots.join('')}</div>
-        
-        `
-        overlayContent.innerHTML = content;
-        activeSlide=0;
-        showVideos();
-      }else{
-        overlayContent.innerHTML = `<h1 class="no-results">No Results Found</h1>`
-      }
-    }
-  })
-}
-
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {

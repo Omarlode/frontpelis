@@ -1,9 +1,9 @@
 const API_KEY = 'api_key=cfadd5cc0bcaa017195108a4ee064248';
 const BASE_URL = 'https://api.themoviedb.org/3';
 const LANG = '&language=es-ES';
-const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&'+API_KEY+LANG;
+const API_URL = BASE_URL + '/discover/tv?sort_by=popularity.desc&'+API_KEY+LANG;
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
-const searchURL = BASE_URL + '/search/movie?'+API_KEY+LANG;
+const searchURL = BASE_URL + '/search/tv?'+API_KEY+LANG;
 
 /*Géneros*/
 const genres = [
@@ -88,7 +88,7 @@ const genres = [
 const main = document.getElementById('main');
 const form =  document.getElementById('form');
 const search = document.getElementById('search');
-const tagsEl = document.getElementById('tags');
+const tagsEl = document.getElementById('tagserie');
 
 const prev = document.getElementById('prev')
 const next = document.getElementById('next')
@@ -106,7 +106,7 @@ function setGenre() {
     tagsEl.innerHTML= '';
     genres.forEach(genre => {
         const t = document.createElement('div');
-        t.classList.add('tag');
+        t.classList.add('tagserie');
         t.id=genre.id;
         t.innerText = genre.name;
         t.addEventListener('click', () => {
@@ -132,7 +132,7 @@ function setGenre() {
 }
 
 function highlightSelection() {
-    const tags = document.querySelectorAll('.tag');
+    const tags = document.querySelectorAll('.tagserie');
     tags.forEach(tag => {
         tag.classList.remove('highlight')
     })
@@ -153,7 +153,7 @@ function clearBtn(){
     }else{
             
         let clear = document.createElement('div');
-        clear.classList.add('tag','highlight');
+        clear.classList.add('tagserie','highlight');
         clear.id = 'clear';
         clear.innerText = 'Clear x';
         clear.addEventListener('click', () => {
@@ -207,20 +207,20 @@ function showMovies(data) {
     main.innerHTML = '';
 
     data.forEach(movie => {
-        const {title, poster_path, vote_average, overview, id} = movie;
+        const {name, poster_path, vote_average, overview, id} = movie;
         const movieEl = document.createElement('div');
         movieEl.classList.add('movie');
         movieEl.innerHTML = `
-             <img src="${poster_path? IMG_URL+poster_path: "http://via.placeholder.com/1080x1580" }" alt="${title}">
+             <img src="${poster_path? IMG_URL+poster_path: "http://via.placeholder.com/1080x1580" }" alt="${name}">
             <div class="movie-info">
-                <h3>${title}</h3>
+                <h3>${name}</h3>
                 <span class="${getColor(vote_average)}">${vote_average}</span>
             </div>
             <div class="overview">
                 
                 ${overview}
                 <br/> 
-                <button class=" trailer" id="${id}">Trailer</button
+                <button class="know-more" id="${id}">Trailer</button
             </div>
         
         `
@@ -234,54 +234,8 @@ function showMovies(data) {
     })
 }
 
-
-/* TRAILER OPEN */
-const overlayContent = document.getElementById('overlay-content');
+/**const overlayContent = document.getElementById('overlay-content');
 /* Open when someone clicks on the span element */
-function openNav(movie) {
-  let id = movie.id;
-  fetch(BASE_URL + '/movie/'+id+'/videos?'+API_KEY).then(res => res.json()).then(videoData => {
-    console.log(videoData);
-    if(videoData){
-      document.getElementById("myNav").style.width = "100%";
-      if(videoData.results.length > 0){
-        var embed = [];
-        var dots = [];
-        videoData.results.forEach((video, idx) => {
-          let {name, key, site} = video
-
-          if(site == 'YouTube'){
-              
-            embed.push(`
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/${key}" title="${name}" class="embed hide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          
-          `)
-
-            dots.push(`
-              <span class="dot">${idx + 1}</span>
-            `)
-          }
-        })
-        
-        var content = `
-        <h1 class="no-results">${movie.original_title}</h1>
-        <br/>
-        
-        ${embed.join('')}
-        <br/>
-        <div class="dots">${dots.join('')}</div>
-        
-        `
-        overlayContent.innerHTML = content;
-        activeSlide=0;
-        showVideos();
-      }else{
-        overlayContent.innerHTML = `<h1 class="no-results">No Results Found</h1>`
-      }
-    }
-  })
-}
-
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
