@@ -24,16 +24,13 @@ async function sendData(form) {
   try {
     const formData = new FormData(form);
     const queryString = new URLSearchParams(formData).toString();
-    const response = await fetch(
-      "http://localhost:1337/api/auth/local", //url + "local"
-      {
-        method: "POST",
-        body: queryString,
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-      }
-    );
+    const response = await fetch(`${url}auth/local`, {
+      method: "POST",
+      body: queryString,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    });
     if (!response.ok) {
       const message = `Error: ${response.status}`;
       throw new Error(message);
@@ -51,11 +48,11 @@ function getData(data) {
 
   localStorage.setItem("jwt", data.jwt);
 
-  window.location.href = "home.html";
+  window.location.href = "index.html";
 }
 function checkToken() {
   if (!isTokenExpired()) {
-    window.location.href = "home.html";
+    window.location.href = "index.html";
   }
 }
 checkToken();

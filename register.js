@@ -13,7 +13,7 @@ async function sendData(form) {
   try {
     const formData = new FormData(form);
     const queryString = new URLSearchParams(formData).toString();
-    const response = await fetch(`${url}local/register`, {
+    const response = await fetch(`${url}auth/local/register`, {
       method: "POST",
       body: queryString,
       headers: {
@@ -33,7 +33,7 @@ async function sendData(form) {
 }
 function checkToken() {
   if (!isTokenExpired()) {
-    window.location.href = "home.html";
+    window.location.href = "index.html";
   }
 }
 checkToken();
@@ -43,5 +43,5 @@ function getData(data) {
 
   localStorage.setItem("jwt", data.jwt);
 
-  window.location.href = "home.html";
+  window.location.href = "index.html";
 }

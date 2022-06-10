@@ -9,7 +9,8 @@ html {
 }
 body {
   height: 100%;
-  margin: 0;
+
+  margin-bottom: 50px;
   background-repeat: no-repeat;
 
   background-attachment: fixed;
@@ -18,16 +19,16 @@ body {
 body {
   background-image: linear-gradient(
     to right top,
-    #123869,
-    #005f8f,
-    #0088ac,
-    #00b1bf,
-    #55dac9
+    #00060e,
+    #222324,
+    #4e505269,
+    #696e6e,
+    #9da3a3
   );
 }
 
 .log {
-  background-color: #115591;
+  background-color: rgb(26, 26, 26);
   width: 350px;
   height: 30px;
   padding-top: 10px;
@@ -49,9 +50,10 @@ body {
   width: 350px;
   margin-left: 40%;
   margin-right: 60%;
-  margin-top: 10%;
+  margin-top: 5%;
+  margin-bottom: 20%;
   border-radius: 12px;
-  border: #0087ac53 6px solid;
+  border: #77797a53 6px solid;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.42);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.42);
 }
@@ -112,7 +114,7 @@ input[type="button"] {
   cursor: pointer;
   outline: inherit;
   color: rgb(255, 255, 255);
-  background-color: #74a7d3;
+  background-color: rgb(26, 26, 26);
   border-radius: 4px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -127,7 +129,7 @@ input[type="button"] {
 .register {
   text-decoration: none;
   color: rgb(255, 255, 255);
-  background-color: #74a7d3;
+  background-color: rgb(26, 26, 26);
   border-radius: 4px;
   padding: 10px;
   transition: 0, 3s;
@@ -135,5 +137,56 @@ input[type="button"] {
 
 .access:hover,
 .register:hover {
-  background-color: rgb(233, 161, 27);
+  background-color: rgb(235, 60, 77);
+}
+/*
+  *
+  * Footer
+  *
+  *********************************/
+
+footer .enlace-bajo a {
+  text-decoration: none;
+  align-content: center;
+  color: rgb(255, 255, 255);
+  font-size: 10px;
+  margin: auto 10px;
+}
+
+footer .enlace-bajo {
+  position: relative;
+  padding: 20px;
+}
+
+section {
+  display: inline;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.logo-bajo {
+  width: 15px;
+  height: 15px;
+}
+
+.separator p {
+  font-size: 13px;
+  color: rgb(5, 105, 52);
+}
+
+.separator {
+  margin-top: 20px;
+  border-top: 1px solid rgba(10, 10, 10, 0.792);
+  text-align: center;
+}
+footer {
+  background-color: rgb(73, 70, 70);
+  position: sticky;
+
+  bottom: 0;
+  padding-bottom: 5%;
+  width: 100%;
+
+  height: 60px; /* Height of the footer */
 }

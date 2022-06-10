@@ -13,7 +13,7 @@ function isTokenExpired() {
 }
 
 //remota heroku
-//https://finalproyectopeliculasseries.herokuapp.com/api
+//https://finalproyectopeliculasseries.herokuapp.com/api/
 //local
-//http://localhost:1337/api/auth/local
-const url = "http://localhost:1337/api/auth/";
+//http://localhost:1337/api/auth/
+const url = "https://finalproyectopeliculasseries.herokuapp.com/api/";
