@@ -515,7 +515,6 @@ section {
 }
 footer {
   background-color: rgba(73, 70, 70, 0.187);
-  position: sticky;
 
   bottom: 0;
   padding-bottom: 7%;

@@ -44,9 +44,9 @@ function populateSlider() {
     img.src = `https://image.tmdb.org/t/p/w500${peli.poster_path}`;
 
     slider.insertBefore(clone, slider.childNodes[slider.childNodes.length - 1]); */
-    let tarjeta = `<div class="movie" id="movie0">
+    let tarjeta = `<div class="movie" id="movie0"><a href="detail.html?id=${peli.id}">
     <img src="https://image.tmdb.org/t/p/w500${peli.poster_path}"
-        alt="" srcset="">
+        alt="" srcset=""></a>
     <div class="description">
         <div class="description__buttons-container">
             <div class="description__button"><i class="fas fa-play"></i></div>
