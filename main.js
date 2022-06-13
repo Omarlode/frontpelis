@@ -9,7 +9,7 @@ async function onRequest() {
       throw new Error(message);
     }
     const data = await response.json();
-    console.log(data);
+
     data.results.forEach((element) => {
       imgObject.push(`https://image.tmdb.org/t/p/w500${element.poster_path}`);
       imgPelisid.push(element.id);

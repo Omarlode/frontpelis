@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pese.css">
+    <link rel="stylesheet" href="menu.css">
+    <title>Proyecto Web</title>
+</head>
+
+<body>
+    <header class="poptv">
+        <nav class="navMenu">
+            <div class="contlogo">
+                <img class="logo" src="/IMAGENES/popcorn.png" alt="">
+                <h1 class="logotext">Popcorn.<b style="color: rgb(255, 210, 29); ">TV</b></h1>
+            </div>
+
+            <div class="search_box">
+                <form id="form">
+                    <input id="search" class="search" type="search"
+                        placeholder="   Busca tus series o peliculas favoritas">
+                </form>
+
+            </div>
+
+            <ol>
+                <div class="menubtns">
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="pese.html">Movies</a>
+                        <ul class="menu-vertical">
+                            <li id="tagmovie" class="tag"></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="pese.html">Series</a>
+                        <ul class="menu-vertical">
+                            <li id="tagserie" class="tag"></li>
+                        </ul>
+                    </li>
+                    <li><a href="login.html">Login</a></li>
+                </div>
+            </ol>
+            <label for="" class="bar">
+                <span class="fa fa-bars" id="bars"></span>
+                <span class="fa fa-times" id="times"></span>
+            </label>
+
+        </nav>
+    </header>
+
+    </div>
+    <div class="fullContainer">
+
+
+        <div id="myNav" class="overlay">
+
+            <!-- CERRAR OVERLAY TRAILER -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- OVERLAY TRAILER FLECHAS-->
+            <div class="overlay-content" id="overlay-content"></div>
+
+            <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8656;</a>
+
+            <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow">&#8658;</a>
+
+        </div>
+
+        <!-- PAGINACIÓN-->
+        <main id="main"></main>
+        <div class="pagination">
+            <div class="page" id="prev">Anterior</div>
+            <div class="current" id="current">1</div>
+            <div class="page" id="next">Siguiente</div>
+
+        </div>
+    </div>
+
+
+
+    <script src="pese.js"></script>
+
+
+</body>
+<section>
+    <div class="enlace-bajo">
+        <a class="link" href="https//www.google.com"> Inicio </a>
+        <a class="link" href="https//www.google.com"> Trendding </a>
+        <a class="link" href="https//www.google.com"> Sobre Nosotros </a>
+        <a class="link" href="https//www.google.com"> Admnistracion </a>
+    </div>
+    <div>
+        <a href="https://www.instagram.com/"><img class="logo-bajo" src="IMAGENES/instagram-3.png" alt=""></a>
+        <a href="https://www.facebook.com/"><img class="logo-bajo" src="IMAGENES/facebook-2.png" alt=""></a>
+        <a href="https://www.twitter.com/"><img class="logo-bajo" src="IMAGENES/gorjeo-4.png" alt=""></a>
+        <a href="https://www.whatsapp.com/"><img class="logo-bajo" src="IMAGENES/whatsapp.png" alt=""></a>
+    </div>
+</section>
+<div class="separator">
+    <p>Todos los derechos reservados. </p>
+</div>
+
+</html>

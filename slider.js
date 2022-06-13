@@ -73,8 +73,6 @@ function populateSlider() {
   document.getElementById("mySlider").innerHTML = todasTarjetas;
 }
 
-
-
 onRequest();
 
 // delete the initial movie in the html
@@ -144,6 +142,3 @@ btnRight.addEventListener("click", (e) => {
 //   console.log(slider.scrollLeft);
 //   console.log(slider.offsetWidth);
 // });
-
-
-
