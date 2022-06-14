@@ -52,6 +52,6 @@ checkToken();
 
 function logout() {
   localStorage.removeItem("jwt");
-
+  localStorage.removeItem("name");
   window.location.href = "login.html";
 }

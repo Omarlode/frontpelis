@@ -109,3 +109,11 @@ document.addEventListener("keyup", function (e) {
 });
 
 onRequest();
+if (!isTokenExpired()) {
+  document.getElementById("login").style.display = "none";
+  const user = document.getElementById("user");
+  const token = localStorage.getItem("name");
+  user.textContent = token;
+  console.log(token);
+} else {
+}
