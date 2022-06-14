@@ -25,14 +25,12 @@ function printData(data) {
   const title = document.createElement("h2");
   const p = document.createElement("p");
   const p2 = document.createElement("p");
-  const p3 = document.createElement("p");
 
   const div = document.createElement("div");
   img.src = `https://image.tmdb.org/t/p/w500${data.poster_path}`;
   title.textContent = data.title;
   p.textContent = data.release_date;
   p2.textContent = data.overview;
-  p3.textContent = data.overview;
 
   div.appendChild(title);
   div.appendChild(img);
