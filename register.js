@@ -42,6 +42,6 @@ function getData(data) {
   console.log(data.jwt);
 
   localStorage.setItem("jwt", data.jwt);
-
+  localStorage.setItem("name", data.user.name);
   window.location.href = "index.html";
 }
