@@ -178,16 +178,7 @@ input[type="search"]::-webkit-search-results-decoration {
   width: 70px;
 }
 
-.contenedor {
-  position: relative;
-  padding-top: 12%;
-  padding-top: 12%;
-  height: 100vh;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: #000000;
-  height: 850px;
-}
+
 
 #toggleContainer {
   height: 10vh;
@@ -266,7 +257,10 @@ input[type="search"]::-webkit-search-results-decoration {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 90%;
+}
+
+.maincnt {
+margin-top: -100px;
 }
 
 #outer3 {
@@ -435,6 +429,7 @@ input[type="search"]::-webkit-search-results-decoration {
     --movie-width: 25vw;
   }
 }
+
 
 /*-----CARRUSELES-------*/
 .movie {

@@ -173,6 +173,8 @@ input[type="search"]::-webkit-search-results-decoration {
 }*/
 
 /* -------------CARRUSEL PRINCIPAL-------------*/
+
+
 #toggleContainer label {
   text-align: center;
   width: 70px;
@@ -180,12 +182,12 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .contenedor {
   position: relative;
-  padding-top: 12%;
-  padding-top: 12%;
+  padding-top: 8%;
+ 
   height: 100vh;
   width: 100%;
   box-sizing: border-box;
-  background-color: #000000;
+  background-color: #33333310;
   height: 850px;
 }
 
@@ -243,22 +245,6 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 10px;
 }
 
-#tilesView {
-  min-height: 100vh;
-  width: 100vw;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    111deg,
-    #123869,
-    #005f8f,
-    #0088ac,
-    #00b1bf,
-    #55dac9
-  );
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
 
 .galleryView {
   height: 900px;
@@ -403,6 +389,33 @@ input[type="search"]::-webkit-search-results-decoration {
 * SLIDER INDICATORS
 *
 *********************************/
+
+.popu {
+  font-size: 30px;
+  color: aliceblue;
+  font-family: "Lato", sans-serif;
+  margin-top: 50px;
+  margin-bottom:0 ;
+  font-weight: 400;
+  padding-left: 20%;
+  padding-bottom: 12px;
+  display: absolute;
+
+}
+
+.preferencias {
+  font-size: 30px;
+  color: aliceblue;
+  font-family: "Lato", sans-serif;
+  margin-top: 50px;
+  margin-bottom:0 ;
+  font-weight: 400;
+  padding-left:2%;
+  padding-right:20%;
+  padding-bottom: 12px;
+  display: block;
+
+}
 .container-indicators {
   width: 100px;
   position: absolute;
@@ -413,22 +426,25 @@ input[type="search"]::-webkit-search-results-decoration {
 .indicator {
   width: 15px;
   height: 2px;
-  background-color: grey;
+
   display: inline-block;
 }
 .indicator.active {
   background-color: white;
 }
 
-.container {
+.container{
   position: relative;
+ margin-top: -220px;
+ 
 }
 
 .root {
-  --movie-width: 15.5vw;
-  --movie-height: 200px;
+  --movie-width: 400px;
+  --movie-height: 400px;
   --arrow-width: 50px;
   --slider-py: 200px;
+
 }
 @media only screen and (max-width: 1000px) {
   .root {
@@ -446,6 +462,8 @@ input[type="search"]::-webkit-search-results-decoration {
   padding: 0 2px;
   font-size: 0.8rem;
   transition: all 0.8s ease-in-out;
+ 
+ 
 }
 
 .movie:nth-of-type(1) {
@@ -456,14 +474,17 @@ input[type="search"]::-webkit-search-results-decoration {
   object-fit: cover;
   height: 100%;
   width: 100%;
-  border-radius: 10px;
+border-radius: 10px;
+  margin-left: -5px;
+  padding: 5px 4px;
+  
 }
 
 .description {
   position: absolute;
   display: none;
   z-index: 9999;
-  background-color: #272727;
+ 
   width: var(--movie-width);
   margin-top: -10px;
   padding: 10px 0;
@@ -529,7 +550,9 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-left: auto;
   margin-right: 0;
 }
-
+.rootcont {
+  margin-top: -90px;
+}
 /*
 *
 * BUTTONS
@@ -541,13 +564,14 @@ input[type="search"]::-webkit-search-results-decoration {
   border-radius: 5px;
   position: absolute;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(32, 32, 32, 0.151);
   outline: none;
   border: none;
   color: white;
   top: var(--slider-py);
   z-index: 5;
   visibility: hidden;
+  margin-top: 15px;
 }
 
 #moveLeft {
